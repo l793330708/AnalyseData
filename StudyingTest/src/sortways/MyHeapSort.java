@@ -50,18 +50,17 @@ public class MyHeapSort {
 	 * @param length
 	 */
 	public static void createHeap(int[] nums,int i,int length) {
-		//构建完全二叉树，并创建符合规则的最大（小）堆
 		//存取根节点的值
 		int temp = nums[i];
-		//判断根节点下方的子女是否大 初始值为根节点的左叶子节点
+		//判断根节点下方的子女是否大 初始值为根节点的左叶子节点,循环的目的只是为了在交换值时重新判断子节点是否满足
 		for(int k = 2*i+1 ; k<length ; k = 2*k + 1) {
 			//判断叶子节点的个数以及大小，使k指向更大的叶子节点
-			if((k+1<length)&&nums[k]<nums[k+1]) {
+			if((k+1<length)&&nums[k]>nums[k+1]) {
 				k++;
 			}
 			//此时k指向更大的子孙
 			//如果该节点比根节点要大则交换位置
-			if(temp < nums[k]) {
+			if(temp > nums[k]) {
 				swap(nums,i,k);
 				// 如果子节点更换了,判断更换后子节点是否满足条件
 				i = k;
