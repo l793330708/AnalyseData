@@ -5,6 +5,8 @@ import arrayUtil.GetArrayUtil;
 /**
  * 希尔排序
  * 内部使用插入排序，外部通过增量创建序列内部排序
+ * 初始增量定义自由，一般可/2,/3
+ * 并非稳定
  * @author Administrator
  *
  */
