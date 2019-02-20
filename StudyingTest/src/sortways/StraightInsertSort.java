@@ -1,20 +1,14 @@
 package sortways;
 
+import arrayUtil.GetArrayUtil;
+
 public class StraightInsertSort {
 /**
  * 直接插入排序
  * @param args
  */
 	public static void main(String[] args) {
-		int[] nums = new int[7];
-		nums[0] = 10;
-		nums[1] = 2;
-		nums[2] = 11;
-		nums[3] = 15;
-		nums[4] = 14;
-		nums[5] = 1;
-		nums[6] = 0;
-		
+		int[] nums = GetArrayUtil.get();
 		insertSort(nums,2);
 		for(int num :nums) {
 			System.out.println(num);

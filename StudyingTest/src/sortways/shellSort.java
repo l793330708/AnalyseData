@@ -1,4 +1,7 @@
 package sortways;
+
+import arrayUtil.GetArrayUtil;
+
 /**
  * 希尔排序
  * 内部使用插入排序，外部通过增量创建序列内部排序
@@ -7,14 +10,7 @@ package sortways;
  */
 public class shellSort {
 	public static void main(String[] args) {
-		int[] nums = new int[7];
-		nums[0] = 10;
-		nums[1] = 2;
-		nums[2] = 11;
-		nums[3] = 15;
-		nums[4] = 14;
-		nums[5] = 1;
-		nums[6] = 0;
+		int[] nums = GetArrayUtil.get();
 		
 		shellSortSort(nums);
 		for(int num :nums) {
