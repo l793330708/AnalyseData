@@ -1,6 +1,7 @@
 package sortways;
 
 import arrayUtil.GetArrayUtil;
+import arrayUtil.PrintArrayUtil;
 
 public class StraightInsertSort {
 /**
@@ -10,9 +11,7 @@ public class StraightInsertSort {
 	public static void main(String[] args) {
 		int[] nums = GetArrayUtil.get();
 		insertSort(nums,2);
-		for(int num :nums) {
-			System.out.println(num);
-		}
+		PrintArrayUtil.print(nums);
 
 	}
 	public static void insertSort(int[] nums,int sort) {
